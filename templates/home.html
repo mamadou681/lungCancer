@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lung Cancer Prediction</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .content {
+        border: 3px solid #73ad21;
+        padding: 10px;
+
+        display: table;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .subButton {
+        padding: 10px;
+        display: table;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .center {
+        /* padding: 10px; */
+        display: table;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        width: 200px;
+        margin-right: -1px;
+      }
+
+      .form-group select {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 150px;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="center"><h2>Lung Cancer Prediction Form</h2></div>
+
+      <!-- Placeholder for the prediction message -->
+      <div id="prediction"><h4>{{data[0]}}</h4></div>
+
+      <form action="/predict" method="post">
+        <div class="form-group">
+          <label for="anxiety">Anxiety (Тревожность):</label>
+          <select id="anxiety" name="anxiety">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="alcohol">Alcohol Consuming(Алкоголь):</label>
+          <select id="alcohol" name="alcohol">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="yellow_fingers">Yellow Fingers (Желтые пальцы):</label>
+          <select id="yellow_fingers" name="yellow_fingers">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender (Пол):</label>
+          <select id="gender" name="gender">
+            <option value="masculine">Masculine</option>
+            <option value="feminine">Feminine</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="swallowing"
+            >Swallowing Difficulty (Затруднение глотания):</label
+          >
+          <select id="swallowing" name="swallowing">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="peer_pressure">Peer Pressure (Ровное давление):</label>
+          <select id="peer_pressure" name="peer_pressure">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="shortness_of_breath">Shortness of Breath (Одышка):</label>
+          <select id="shortness_of_breath" name="shortness_of_breath">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fatigue">Fatigue (Усталость):</label>
+          <select id="fatigue" name="fatigue">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <input class="subButton" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
